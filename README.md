@@ -1,26 +1,29 @@
 # Getting started working on myHealth!
 
-## Install dependencies
+## Using Poetry
+* [For more information on Poetry](https://python-poetry.org/)
+
+### Install dependencies
 ```
 poetry install
 ```
 
-## Add dependencies
+### Add dependencies
 ```
 poetry add [package-name]
 ```
 
-## Activate Poetry Virtual Environment
+### Activate Poetry Virtual Environment
 ```
 poetry shell
 ```
 
-## Exit Poetry's Virtual Environment
+### Exit Poetry's Virtual Environment
 ```
 exit
 ```
 
-## Run cmds
+### Run cmds
 ```
 poetry run [cmd]
 ```
