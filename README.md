@@ -1,23 +1,37 @@
 # Getting started working on myHealth!
 
 ## Install dependencies
-```poetry install```
+```
+poetry install
+```
 
 ## Add dependencies
-```poetry add [package-name]```
+```
+poetry add [package-name]
+```
 
 ## Activate Poetry Virtual Environment
-```poetry shell```
+```
+poetry shell
+```
 
 ## Exit Poetry's Virtual Environment
-```exit```
+```
+exit
+```
 
 ## Run cmds
-```poetry run [cmd]```
+```
+poetry run [cmd]
+```
 * Like black or pytest.
 
 # To build this project
-```poetry build```
+```
+poetry build
+```
 
 # To publish this project
-```poetry publish```
+```
+poetry publish
+```
