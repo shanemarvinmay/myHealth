@@ -52,6 +52,16 @@ poetry publish
 
 ---
 
+# Model
+
+# Mini Model
+* used for development and demo purposes.
+* Followed [this tutorial](https://www.tensorflow.org/tutorials/images/classification) (among a few others)
+## Performance
+![Second iteration resulting in ~75% accuracy]('model/model_perf_mini_2.png')
+
+---
+
 # Data Sources
 # [AI Crowd Food Recognition 2022](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/dataset_files)
 ## [Food 101](https://www.kaggle.com/datasets/dansbecker/food-101?resource=download)
