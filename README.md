@@ -61,8 +61,6 @@ poetry publish
 ## Performance
 ![Second iteration resulting in ~75% accuracy](model/model_perf_mini_2.png)
 
-(https://github.com/shanemarvinmay/myHealth/blob/main/model/model_perf_mini_2.png?raw=true)
-
 ---
 
 # Data Sources
