@@ -1298,6 +1298,17 @@ files = [
 tests = ["pytest", "pytest-cov"]
 
 [[package]]
+name = "tinydb"
+version = "4.8.0"
+description = "TinyDB is a tiny, document oriented database optimized for your happiness :)"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "tinydb-4.8.0-py3-none-any.whl", hash = "sha256:30c06d12383d7c332e404ca6a6103fb2b32cbf25712689648c39d9a6bd34bd3d"},
+    {file = "tinydb-4.8.0.tar.gz", hash = "sha256:6dd686a9c5a75dfa9280088fd79a419aefe19cd7f4bd85eba203540ef856d564"},
+]
+
+[[package]]
 name = "typer"
 version = "0.12.0"
 description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
@@ -1488,4 +1499,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "6c028279525fa6c43228963e0f2a10377dc0c6480fb8f419d6955f79c46538dc"
+content-hash = "d60ed69b4e2ba7605d8e712da8bd5be5dbe6e4c3b66e77c85748d1236f9e42a7"
