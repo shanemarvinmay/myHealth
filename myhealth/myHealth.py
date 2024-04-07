@@ -10,7 +10,11 @@ class_names = ["hamburger", "hot dog", "pizza"]
 
 @app.command()
 def get_nutrition_from_photo(photo_path: str):
-    """Upload photo based on file path."""
+    """get_nutrition_from_photo takes in a path to a photo of food, and prints the nutritional information.
+
+    Args:
+        photo_path (str): a path to a photo of food.
+    """
     img = tf.keras.utils.load_img(photo_path)
     img_array = tf.keras.utils.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)  # Create a batch
