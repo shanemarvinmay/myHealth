@@ -39,4 +39,4 @@ jobs:
         poetry run ruff check .
     - name: Run tests
       run: |
-        poetry run coverage run -m  pytest --capture=no --verbose tests/* && coverage report -m
+        poetry run coverage run -m  pytest --capture=no --verbose tests/* && poetry run coverage report -m
