@@ -57,8 +57,9 @@ poetry publish
 # Mini Model
 * used for development and demo purposes.
 * Followed [this tutorial](https://www.tensorflow.org/tutorials/images/classification) (among a few others)
+    * Used [this tutorial](https://www.tensorflow.org/guide/keras/serialization_and_saving) in particular to save and load the model.
 ## Performance
-![Second iteration resulting in ~75% accuracy]('model/model_perf_mini_2.png')
+![Second iteration resulting in ~75% accuracy](model/model_perf_mini_2.png)
 
 ---
 
