@@ -10,7 +10,7 @@ model_file_path = "model/mini_model.keras"
 class_names = ["hamburger", "hot dog", "pizza"]
 
 
-def get_nutritional_data_for_food(food_name):
+def get_nutritional_data_for_food(food_name: str):
     db = TinyDB("data/db.json")
     Food = Query()
     result = db.search(Food.name == food_name)
@@ -20,7 +20,7 @@ def get_nutritional_data_for_food(food_name):
     return result[0]
 
 
-def print_nutritional_data(nutritional_data):
+def print_nutritional_data(nutritional_data: dict):
     # Print food name
     food_name = nutritional_data.get("name", "UNKNOWN FOOD NAME").title()
     print(f"\n{food_name}")
