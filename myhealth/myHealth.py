@@ -10,6 +10,17 @@ model_file_path = "model/mini_model.keras"
 class_names = ["hamburger", "hot dog", "pizza"]
 
 
+def get_food_name_from_user() -> str:
+    food_name = input("Enter food name (type quit to quit):").lower()
+    while True:
+        if food_name == "quit":
+            exit()
+        nutritional_data = get_nutritional_data_for_food(food_name)
+        if nutritional_data != {}:
+            return food_name
+        food_name = input("Enter food name that is spelled correctly (type quit to quit):").lower()
+
+
 def get_nutritional_data_for_food(food_name: str):
     db = TinyDB("data/db.json")
     Food = Query()
@@ -50,10 +61,18 @@ def get_nutrition_from_photo(photo_path: str):
     img_array = tf.expand_dims(img_array, 0)  # Create a batch
     model = tf.keras.models.load_model(model_file_path)
     predictions = model.predict(img_array)
-    score = tf.nn.softmax(predictions[0])
-    food_name = class_names[np.argmax(score)]
-    confidence_score = round(100 * np.max(score), 2)
-    print(f"This food is a {food_name} with a {confidence_score}% confidence.")
+    print(f"predictions:{predictions}")
+    scores = tf.nn.softmax(predictions[0])
+    print(f"scores:{scores}")
+    highest_score_highest_idx = np.argmax(scores)
+    print(f"highest_score_highest_idx:{highest_score_highest_idx}")
+    if scores[highest_score_highest_idx] < 0.8:
+        print("Low confidence. Ask for food entry.")
+        food_name = get_food_name_from_user()
+    else:
+        food_name = class_names[highest_score_highest_idx]
+        confidence_score = round(100 * np.max(scores), 2)
+        print(f"This food is a {food_name} with a {confidence_score}% confidence.")
     nutritional_data = get_nutritional_data_for_food(food_name)
     print_nutritional_data(nutritional_data)
 
