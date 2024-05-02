@@ -1,5 +1,14 @@
 # Getting started working on myHealth!
 
+## To run this project
+1. Install poetry. [Link to instructions](https://python-poetry.org/)
+2. Run ```poetry shell```
+2. Run ```poetry install```
+2. Run
+```
+python myhealth/myHealth.py path/to/image.jpeg
+```
+
 ## Using Poetry
 * [For more information on Poetry](https://python-poetry.org/)
 
