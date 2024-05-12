@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from prettytable import PrettyTable
 from tinydb import TinyDB, Query
 
